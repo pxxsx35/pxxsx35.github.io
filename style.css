@@ -78,6 +78,7 @@ nav
         padding: 3rem 0;
         height: auto;
         flex-direction: column;
+
     }
     .logo
     {
@@ -86,6 +87,26 @@ nav
     .menu
     {
         flex-direction: column;
+        width: 100%;
+        align-items:  center;
+
+    }
+    .menu li
+    {
+
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }   
+
+    .menu li:hover
+    {
+        background: #f2a461 ; 
+    }
+ 
+    .menu li a:hover
+    {
+        background: none;
     }
 }
 
