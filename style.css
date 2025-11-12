@@ -1,10 +1,94 @@
+
+
 *{
     margin: 0;
     padding: 0;
     background: #161e20;
     box-sizing: border-box;
+    color : white;
+    font-family: "Carme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
+.experience-container {
+  display: flex;
+  flex-wrap: wrap; 
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px; 
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.footer
+{
+    max-width: 600px;
+    height: 100px;
+    
+}
+
+.experience-column {
+  flex: 1; 
+  min-width: 300px; 
+}
+
+
+.experience-section h3 {
+  font-size: 20px;
+  color: #f2a461;
+  margin-bottom: 10px;
+}
+
+.experience-section ul {
+    text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.experience-section ul li {
+  margin-bottom: 8px;
+}
+
+.experience-section p {
+  margin-bottom: 10px;
+  color: #919191;
+  
+}
+.game-container {
+  position: relative;
+  width: 100%;         
+  max-width: 960px;   
+  margin: 0 auto;      
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+}
+.aboutme
+{
+    position: relative;
+  width: 100%;         
+  max-width: 960px;   
+  margin: 0 auto;    
+  line-height: 35px;
+  text-align: justify;
+  font-size: 20px;
+}
+.aboutme p {
+  margin-bottom: 1em; 
+}
+
+.aboutme strong {
+  font-weight: bold; 
+}
+.game-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .container
 {
     max-width: 1600px;
@@ -18,14 +102,30 @@
 
 }
 
-
+#navbar
+{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.5s;
+     z-index: 1; 
+}
 nav * {
     background: #0d1413 ;   
+ 
+   
+
+
+
 }
 nav  
 {
     background: #0d1413 ;   
+    transition: 0.5s;
+        border-bottom: 5px solid #f2a461;
 }
+
 
 .menu li
 {
@@ -72,7 +172,89 @@ nav
     color: #fff;
 }
 
+.btn
+{
+    border: 2px solid #f2a461;
+    color: white;
+    text-decoration: none;
+    background-color: #161e20;
+    padding: 10px;
+    transition: 0.3s;
+
+}
+.box-btn
+{
+    margin-bottom : 1.5rem;
+}
+.btn:hover
+{
+      border: 2px solid #f2a461;
+    color: white;
+    text-decoration: none;
+    background-color: #f2a461;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.coding
+{
+      max-width: 640px; 
+   
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+}
+.content
+{
+ display: inline-block;
+  flex: 1; /* ให้เท่ากับพื้นที่ที่ต้องการ */
+  max-width: 60%; /* ถ้าต้องการจำกัดความกว้าง */
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  text-align: justify;
+
+  
+}
+
+.explanntion
+{
+    margin-bottom: 3rem;
+    max-width: 1000px;
+}
+.game
+{
+      margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-start; /* ชิดบน */
+    gap: 50px; /* ระยะระหว่างคอลัมน์ */
+    max-width: 900px;
+
+}
+
+.game.reverse {
+    flex-direction: row-reverse;
+}
+body.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.2s forwards; /* 1.5 วินาที ปรับได้ */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (max-width : 434px) {
+    .content
+{
+ display: block;
+ width: 100%;
+}
     .nav-con
     {
         padding: 3rem 0;
@@ -108,5 +290,20 @@ nav
     {
         background: none;
     }
+   .game, .game.reverse {
+    flex-direction: column; 
+    align-items: center;   
+  }
+
+  .game .content, .game.reverse .content {
+    width: 100%;      
+    margin-left: 0;   
+    text-align: center; 
+  }
+
+  .game .content img, .game.reverse .content img {
+    margin: 0 auto 30px auto; 
+  }
+ 
 }
 
