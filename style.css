@@ -1,9 +1,17 @@
 
 
+:root {
+    --bg: #0b0b0b;          
+    --primary: #0ff;         
+    --secondary: #f0f;       
+    --accent: #ff3c00;        
+    --text-main: #ffffff;     
+    --text-sub: #aaa;      
+}
 *{
     margin: 0;
     padding: 0;
-    background: #161e20;
+    background: var(--bg);
     box-sizing: border-box;
     color : white;
     font-family: "Carme", sans-serif;
@@ -25,7 +33,9 @@
 .footer
 {
     max-width: 600px;
-    height: 100px;
+    height: 10px;
+ 
+    margin: 3rem auto;
     
 }
 
@@ -37,7 +47,7 @@
 
 .experience-section h3 {
   font-size: 20px;
-  color: #f2a461;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
@@ -53,7 +63,7 @@
 
 .experience-section p {
   margin-bottom: 10px;
-  color: #919191;
+  color: var(--text-sub);
   
 }
 .game-container {
@@ -66,16 +76,27 @@
 }
 .aboutme
 {
-    position: relative;
-  width: 100%;         
-  max-width: 960px;   
-  margin: 0 auto;    
-  line-height: 35px;
-  text-align: justify;
-  font-size: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+
+}
+.aboutme img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .aboutme p {
   margin-bottom: 1em; 
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.7;
+  color: white;
 }
 
 .aboutme strong {
@@ -91,7 +112,7 @@
 }
 .container
 {
-    max-width: 1600px;
+    max-width: 1140px;
     margin: 0 auto;
 
 }
@@ -112,7 +133,7 @@
      z-index: 1; 
 }
 nav * {
-    background: #0d1413 ;   
+    background: var(--bg) ;   
  
    
 
@@ -121,9 +142,9 @@ nav * {
 }
 nav  
 {
-    background: #0d1413 ;   
+    background: var(--bg) ;   
     transition: 0.5s;
-        border-bottom: 5px solid #f2a461;
+        border-bottom: 5px solid var(--primary);
 }
 
 
@@ -142,7 +163,7 @@ nav
 {
 
     background: none;
-    color: #fff;
+    color: var(--text-main);
     text-decoration: none;
     padding: 20px;
     transition: 0.5s;
@@ -150,10 +171,8 @@ nav
 
 .menu li a:hover
 {
-    background: #f2a461;
+    background: var(--primary);
 }
-
-
 
 
 .nav-con
@@ -169,15 +188,16 @@ nav
 {
 
     font-size: 1.5rem;
-    color: #fff;
+    font-weight: bold;
+    color: var(--text-main);
 }
 
 .btn
 {
-    border: 2px solid #f2a461;
-    color: white;
+    border: 2px solid var(--secondary);
+    color: var(--text-main);
     text-decoration: none;
-    background-color: #161e20;
+    background-color: var(--bg);
     padding: 10px;
     transition: 0.3s;
 
@@ -188,10 +208,10 @@ nav
 }
 .btn:hover
 {
-      border: 2px solid #f2a461;
-    color: white;
+      border: 2px solid var(--secondary);
+    color: var(--text-main);
     text-decoration: none;
-    background-color: #f2a461;
+    background-color: var(--secondary);
     border-radius: 20px;
     padding: 10px;
 
@@ -239,16 +259,12 @@ nav
 .game.reverse {
     flex-direction: row-reverse;
 }
-body.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.2s forwards; /* 1.5 วินาที ปรับได้ */
+
+#footer
+{
+  display: block;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
 @media screen and (max-width : 434px) {
     .content
 {
@@ -283,7 +299,7 @@ body.fade-in {
 
     .menu li:hover
     {
-        background: #f2a461 ; 
+        background: var(--primary) ; 
     }
  
     .menu li a:hover
@@ -304,6 +320,145 @@ body.fade-in {
   .game .content img, .game.reverse .content img {
     margin: 0 auto 30px auto; 
   }
+ #footer {
+    display: none;
+  }
+  .aboutme {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutme img {
+    width: 60%;
+    margin: 0 auto;
+  }
  
 }
+
+
+
+.popup {
+    position: relative;     
+    transform: translateY(20px); 
+    opacity: 0;              
+    
+    animation: headPop 1s ease-out forwards;
+}
+
+.popup-2 {
+    position: relative;     
+    transform: translateY(10px); 
+    opacity: 0;              
+    
+    animation: headPop 1.5s ease-out forwards;
+}
+
+
+@keyframes headPop {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animate-hr {
+    height: 1px;
+    border: none;
+    background: var(--primary);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    animation: fillHr 2s forwards;
+}
+
+@keyframes fillHr {
+    to { transform: scaleX(1); }
+}
+
+
+/* Test */
+/* ===================== */
+/*  GRID LAYOUT          */
+/* ===================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects-grid, a {
+  text-decoration: none;
+}
+.projects-grid :hover * {
+  text-decoration: none;
+  color : var(--primary);
+   animation: shake 0.35s linear;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-3px); }
+  66% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+/* ===================== */
+/*  CARD                 */
+/* ===================== */
+
+.project-card {
+    background: none;
+    border-radius: 8px;
+    overflow: hidden;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    border:  var(--primary);
+}
+
+
+
+/* รูปด้านบน */
+.project-img img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+      object-position: center;
+}
+
+/* เนื้อหา */
+.project-content {
+    padding: 15px;
+}
+
+.project-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.role {
+    margin: 3px 0 10px;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+
+
+.desc {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+
 
