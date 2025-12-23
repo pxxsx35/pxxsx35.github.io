@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
-    <script src="../../script.js"></script>
+    <script>
+        const version = Date.now();
+        document.write(`<link rel="stylesheet" href="style.css?v=${version}">`);
+        document.write(`<script src="script.js?v=${version}"><\/script>`);
+    </script>   
+<link rel="icon" href="icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
@@ -22,7 +27,7 @@
 
 <div class="aboutme">
 
-  <img src="myPhoto.png?v=1" alt="" srcset="" class="popup">
+  <img src="myphoto.png" alt="" srcset="" class="popup">
 
 <p class="popup">
 Hello, I'm <strong>Teerapuwanai Chanachaisombud (ธีรภูวนัย ชะนะชัยสมบัติ)</strong>, but my friends call me Pause. I am currently a third-year student at Walailak University, majoring in Interactive Multimedia Animation and Game. I have a strong interest in <strong>Game Development</strong> and enjoy creating games that are both challenging and fun.
@@ -109,6 +114,4 @@ What I want to learn during the internship: I want to understand how an efficien
 
 <div id="footer"></div>
 </body>
-
 </html>
-

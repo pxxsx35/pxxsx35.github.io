@@ -194,7 +194,7 @@ nav
 
 .btn
 {
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--primary);
     color: var(--text-main);
     text-decoration: none;
     background-color: var(--bg);
@@ -422,6 +422,8 @@ nav
     display: flex;
     flex-direction: column;
     border:  var(--primary);
+
+    
 }
 
 
