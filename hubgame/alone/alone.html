@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
-    <script src="../../script.js"></script>
+    <script>
+        const version = Date.now();
+        document.write(`<link rel="stylesheet" href="../../style.css?v=${version}">`);
+        document.write(`<script src="../../script.js?v=${version}"><\/script>`);
+    </script>   
+<link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
