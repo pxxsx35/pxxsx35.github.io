@@ -8,6 +8,7 @@
         const version = Date.now();
         document.write(`<link rel="stylesheet" href="../../style.css?v=${version}">`);
         document.write(`<script src="../../script.js?v=${version}"><\/script>`);
+        debug.log("style.css?v=${version}");
     </script>   
 <link rel="icon" href="../../icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -281,3 +282,4 @@ Provides developer feedback when positions run out
 </body>
 
 </html>
+
