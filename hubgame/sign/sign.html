@@ -99,14 +99,14 @@
       <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">GhostData class</strong> <br> The GhostData class implements a Data-Driven Design using Unity's ScriptableObject. This approach decouples ghost attributes and visual assets from the core game logic, allowing for rapid content creation and balancing without code modifications. By centralizing essential data—such as dialogue answers, progression stages, and asset references—the system ensures high scalability and memory efficiency for the game's entity architecture.</h2>
       <img src="picture/1.png" alt="" style="margin-top: 4%;">
        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);"> Ghost Data</strong> <br>Example of creating GhostData using ScriptableObjects for efficient data management</h2>
-      <img src="picture/data.png" alt="" style="margin-top: 4%;margin-bottom: 10%;max-width: 640px;">
+      <img src="picture/data.png" alt="" style="margin-top: 4%;margin-bottom: 5%;max-width: 640px;">
 
        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);"> GhostDatabase class</strong> <br>The GhostDatabase class serves as a centralized repository for all ghost assets within the game. By utilizing a ScriptableObject-based List, I established a 'Single Source of Truth' that allows for efficient data management and seamless access across various game systems, ensuring the architecture remains organized as the game's content scales.</h2>
       <img src="picture/2.png" alt="" style="margin-top: 4%;">
 
       <img src="picture/database.png" alt="" style="margin-top: 4%;max-width: 640px;">
 
-      <hr style="margin-bottom: 10%;">
+      <hr style="margin-bottom: 3%;">
        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">GhostSpawner class</strong> <br> The GhostSpawner class serves as the core execution layer bridging the GhostDatabase with the game world. It utilizes a Dictionary-based system to efficiently track and manage object creation and prevent duplicates, while incorporating Runtime Optimization to strip unnecessary components for flexible asset reuse—all operating directly through a ScriptableObject-driven approach.</h2>
       <img src="picture/3.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
 
@@ -151,3 +151,4 @@ Through this project, I gained hands-on experience using ScriptableObjects for e
 </body>
 
 </html>
+
