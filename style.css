@@ -265,8 +265,8 @@ nav
   .machanic img
 {
 display: block;
-  width: 30vw;
-  margin-right: ;
+ width: 30vw;
+
              /* กว้าง 100% ของความกว้างหน้าจอ */
 }
 .game.reverse {
@@ -470,6 +470,15 @@ display: block;
     font-size: 18px;
     font-weight: 600;
 }
+
+.project-content h3 b:hover {
+  color: var(--primary);
+}
+
+.project-content h3 b {
+  color: var(--accent);
+}
+
 
 .role {
     margin: 3px 0 10px;
