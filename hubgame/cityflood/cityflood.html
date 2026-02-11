@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script>
+        const version = Date.now();
+        document.write(`<link rel="stylesheet" href="../../style.css?v=${version}">`);
+        document.write(`<script src="../../script.js?v=${version}"><\/script>`);
+    </script>   
+<link rel="icon" href="../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in">
+    <!-- Navbar -->
+       <div id="navbar"></div>
+
+    <!-- End Navbar  -->
+
+
+<div class="container" align = "center">
+  
+
+      
+    <h1 style="font-weight: bold;font-size: 60px;margin-top: 3%;">City Flood</h1>
+
+
+  <h2 style="color : var(--accent); margin-bottom: 2%;">Game Practice Project</h2>
+  <h2 style="color : var(--primary); margin-bottom: 2%;">Made with Unreal Engine 5</h2>
+  
+    <hr>
+
+<div class="game-container">
+  
+      
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/hDrL_0DIQDg?si=XJkEzLkP9FxQnryi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+    <!-- End Game Alone -->
+
+    <br>
+    <div class="box-btn">
+            <a href="https://github.com/pxxsx35/HubCodeGame/tree/main/Alone" class="btn" target="_blank">Download Game</a>
+            <!-- <a href="" class="btn">GitHub</a> -->
+    </div>
+     <h5 align = "right">Dev by: Teerapuwanai Chanachaisombud</h5>
+    <hr>
+    <br>
+
+    <div class="explanntion" align ="center">
+      <h2 >  Cityflood Core Gameloop</h2>
+      <br>
+
+    <img src="picture/gameloop.png" alt="Game Loop" style="width: 100%;" >
+  
+
+
+    </div>
+    <!-- End GameLoop -->
+
+           
+
+
+    <hr>
+    <br>
+
+
+
+
+    <div class="explanntion">
+     <h1 style="font-weight: bold;font-size: 60px;margin-top: 3%;" align = "center">Features</h1> <br>
+     <!-- First -->
+    <div class="popup-2">
+
+     <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);"> Enemy System</strong> <br> The Modular Enemy Framework is an architecture built on the principle of Separation of Concerns. This structure ensures that the codebase remains clean, flexible, and highly scalable for future development.</h2>
+      <img src="picture/diagram.png" alt="" style="margin-top: 4%;margin-bottom: 10%;">
+    
+      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Class EnemyBase</strong> <br> In this project, I designed and developed an Enemy AI system using an Abstract Base Class as a foundation for all enemy types. This architecture ensures the codebase remains flexible and highly scalable for long-term development.</h2>
+      <img src="picture/1.png" alt="" style="margin-top: 4%;">
+      <img src="picture/2.png" alt="" style="margin-top: 4%;">
+      <hr style="margin-bottom: 10%;">
+       <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Class EnemyAnimation , EnemyController</strong> <br> The EnemyController class serves as the decision-making hub, determining the enemy's behavioral states and logic. Meanwhile.<br> The EnemyAnimation class is responsible for managing and updating the enemy's animation parameters to ensure visual synchronization.</h2>
+      <img src="picture/3.png" alt="" style="margin-top: 4%;">
+      <img src="picture/4.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
+
+
+      <!-- ------------------------- -->
+    
+       
+    <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">MoveToPlayer</strong> <br> This architectural approach ensures the system is both maintainable and scalable. My objective was to build a robust framework that enables the rapid integration of new enemy types by clearly decoupling logic, data, and visuals in accordance with industry standards..</h2>
+
+ <br>
+<br>
+  <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">PerformAttack</strong> <br>The PerformAttack method is defined as an abstract method, serving as a structural contract that mandates every enemy subclass implement its own unique combat logic. By decoupling the attack execution from the core AI state management, I can easily implement specialized behaviors—such as the Rat's poison affliction or the Slime's slow effect—without modifying the foundational AI framework. This ensures high extensibility and follows the Open-Closed Principle of object-oriented design.</h2>
+
+    <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 580px;">
+  <source src="ratAtk.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  
+
+
+      <div class="machanic">
+    <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 580px;">
+  <source src="batAtk.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 580px;">
+  <source src="slimeAtk.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+ 
+</div>
+  <ul>
+  <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Class Slime </strong> <br> The Slime class demonstrates the extensibility of the core framework by overriding the base attack logic to implement a specialized 'Slow' debuff mechanic.
+<br><br>
+    
+            <li>
+Dynamic Debuff System: During the attack phase, the Slime reduces the player's movement speed by 50%, adding a strategic layer to the combat.
+
+            </li><br>
+            <li>
+Decoupled Combat Logic: By utilizing the IDamageable interface, the Slime can interact with any destructible object without being tightly coupled to specific player or object classes.
+            </li><br>
+            <li>
+Optimized Performance: I utilized a HashSet for real-time target tracking to ensure high-performance lookups and prevent duplicate entries, along with a robust cleanup routine to handle null references and maintain system stability. </h2>
+
+            </li><br>
+
+      </ul>
+
+  <img src="picture/5.png" alt=""><br><br>
+  <ul>
+  <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Class Rat</strong> <br>The Rat class implements a specialized combat mechanic focusing on Status Effects and Damage over Time (DoT).
+<br><br>
+
+<li>
+Multi-Phase Attack System: By overriding the PerformAttack method, I implemented a dual-layered combat logic that inflicts both immediate physical damage and a lingering poison effect.
+</li><br>
+
+<li>
+Decoupled Architecture: Using the IDamageable interface, the Rat interacts with any destructible entity seamlessly, maintaining a clean separation of concerns and reducing code dependency.
+</li><br>
+
+<li>
+Performance-Oriented Target Tracking: I utilized a HashSet for highly efficient O(1) lookups and implemented a robust cleanup routine to handle null references, ensuring optimal performance even in crowded combat scenarios.
+</li><br>
+
+<li>
+Data-Driven Balancing: The poison parameters are exposed via serialized fields, allowing for rapid iteration and balancing of game mechanics directly within the Unity Editor.</h2>
+</li>  </ul><br>
+<img src="picture/6.png" alt=""><br>
+<br>
+
+<!-- Start Bat -->
+  <ul>
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Class Bat</strong> <br>The Bat class showcases the power of the framework's Polymorphism by transitioning from ground-based movement to an Aerial AI system.
+<br><br>
+<li>
+Polymorphic 2D Pathing: By overriding the MoveToPlayer method, the Bat implements full Vector2 movement. It calculates the normalized direction between itself and the player, allowing for smooth flight paths across the entire 2D space.
+
+</li><br>
+<li>
+Physical-Based Movement: It utilizes Rigidbody2D velocity controlled by directional vectors, ensuring consistent movement speed regardless of the distance to the target.
+
+</li><br>
+<li>
+Interface-Driven Interaction: Consistent with the project's architecture, the Bat interacts with targets via the IDamageable interface. This ensures that the combat system remains decoupled and highly reusable.
+
+</li> <br>
+<li>
+Robust State Management: The implementation includes safety checks within the attack logic to handle destroyed objects, preventing memory leaks and maintaining the integrity of the HashSet target tracking system.</h2>
+
+</li>
+
+</ul><br><br>
+<img src="picture/7.png" alt=""><br><br>
+  <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">IDamageable </strong> <br>The IDamageable interface decouples combat logic from specific entity classes, allowing enemies to interact with any target—whether player characters or other objects—without needing to know their underlying types. Furthermore, incorporating specialized methods like ApplyPoison demonstrates a scalable architectural approach for managing complex combat mechanics and status effects across diverse game entities efficiently.</h2><br>
+
+<img src="picture/8.png" alt=""><br><br>
+<img src="picture/9.png" alt=""><br><br>
+
+
+
+
+      </div>
+      
+
+</div>
+
+     <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--accent);"> What I Learned</strong> <br> 
+Developed a Modular Enemy Framework based on the Separation of Concerns principle. By decoupling AI logic, shared attributes, and visuals into distinct modules , I created a highly scalable system that allows for rapid integration of diverse enemy types. Leveraged Polymorphism to implement specialized behaviors like aerial pathing and status afflictions, while optimizing performance through Integer Hashing and efficient Data Structures
+
+</h2><br>
+
+
+</div>
+
+ <div id="footer"></div>  
+
+</div>
+</body>
+
+</html>
+
+
