@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Signful Dream</title>
     <script>
         const version = Date.now();
         document.write(`<link rel="stylesheet" href="../../style.css?v=${version}">`);
@@ -15,140 +15,113 @@
 <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
 </head>
 <body class="fade-in">
-    <!-- Navbar -->
-       <div id="navbar"></div>
+    <div id="navbar"></div>
 
-    <!-- End Navbar  -->
-
-
-<div class="container" align = "center">
-  
-
-      
-    <h1 style="font-weight: bold;font-size: 60px;margin-top: 3%;">Signful Dream</h1>
-
-
-  <h2 style="color : var(--accent); margin-bottom: 2%;">Bit Egg Game Jam 2025</h2>
-  <h2 style="color : var(--primary); margin-bottom: 2%;">Made with Unity (2022.3.62f2)</h2>
-  
+<div class="container" align="center">
+    <h1 style="font-weight: bold; font-size: 60px; margin-top: 3%;">Signful Dream</h1>
+    <h2 style="color: var(--accent); margin-bottom: 2%;">Bit Egg Game Jam 2025</h2>
+    <h2 style="color: var(--primary); margin-bottom: 2%;">Made with Unity (2022.3.62f2)</h2>
+    
     <hr>
 
-<div class="game-container">
-  
-      
-<iframe
-  src="https://itch.io/embed-upload/15401249?color=000000"
-  frameborder="0"
-  allowfullscreen
-  width="960"
-  height="540">
-  <a href="https://pxxsx35.itch.io/alone">Play Sign on itch.io</a>
-</iframe>
-</div>
-
-
-    <!-- End Game Alone -->
+    <div class="game-container">
+        <iframe
+          src="https://itch.io/embed-upload/15401249?color=000000"
+          frameborder="0"
+          allowfullscreen
+          width="960"
+          height="540">
+          <a href="https://pxxsx35.itch.io/signful-dream">Play Signful Dream on itch.io</a>
+        </iframe>
+    </div>
 
     <br>
     <div class="box-btn">
             <a href="https://pxxsx35.itch.io/signful-dream" class="btn" target="_blank">Itch.io</a>
             <a href="https://github.com/pxxsx35/HubCodeGame/tree/main/Sign" class="btn" target="_blank">Source Code</a>
-            <!-- <a href="" class="btn">GitHub</a> -->
     </div>
-       <h5 align = "right">Dev by: Pacharapon Ketkaew  , Teerapuwanai Chanachaisombud <br> Art by : Chadapak Thanaphopmongkhon , Wasita Nuansri</h5>
+    <h5 align="right">Dev by: Pacharapon Ketkaew, Teerapuwanai Chanachaisombud <br> Art by: Chadapak Thanaphopmongkhon, Wasita Nuansri</h5>
     
     <hr>
     <br>
 
     <div class="explanntion">
-      <h2 >  signful-dream Game Machanic</h2>
+      <h2>Signful Dream Game Mechanics</h2>
       <br>
-<div class="machanic">
-    <img src="picture/gameloop.png" alt="Game Loop" >
-    <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 580px;">
-  <source src="gameplay.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
-
+      <div class="machanic">
+        <img src="picture/gameloop.png" alt="Game Loop">
+        <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 580px;">
+          <source src="gameplay.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-    <!-- End GameLoop -->
 
-        <br>
+    <br>
     <hr>
     <br>
-            <h2 >Game Play</h2>
+    <h2>Gameplay Preview</h2>
 
-<div class="game-container">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/xsHKoGkjO-U?si=WtxxxYWLluYvcAX_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+    <div class="game-container">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/xsHKoGkjO-U?si=WtxxxYWLluYvcAX_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 
     <hr>
     <br>
-
-
-
 
     <div class="explanntion">
-     <h1 style="font-weight: bold;font-size: 60px;margin-top: 3%;">Features</h1> <br>
-     <!-- First -->
-    <div class="popup-2">
-
-    
-    
-      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">GhostData class</strong> <br> The GhostData class implements a Data-Driven Design using Unity's ScriptableObject. This approach decouples ghost attributes and visual assets from the core game logic, allowing for rapid content creation and balancing without code modifications. By centralizing essential data—such as dialogue answers, progression stages, and asset references—the system ensures high scalability and memory efficiency for the game's entity architecture.</h2>
-      <img src="picture/1.png" alt="" style="margin-top: 4%;">
-       <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);"> Ghost Data</strong> <br>Example of creating GhostData using ScriptableObjects for efficient data management</h2>
-      <img src="picture/data.png" alt="" style="margin-top: 4%;margin-bottom: 5%;max-width: 640px;">
-
-       <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);"> GhostDatabase class</strong> <br>The GhostDatabase class serves as a centralized repository for all ghost assets within the game. By utilizing a ScriptableObject-based List, I established a 'Single Source of Truth' that allows for efficient data management and seamless access across various game systems, ensuring the architecture remains organized as the game's content scales.</h2>
-      <img src="picture/2.png" alt="" style="margin-top: 4%;">
-
-      <img src="picture/database.png" alt="" style="margin-top: 4%;max-width: 640px;">
-
-      <hr style="margin-bottom: 3%;">
-       <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">GhostSpawner class</strong> <br> The GhostSpawner class serves as the core execution layer bridging the GhostDatabase with the game world. It utilizes a Dictionary-based system to efficiently track and manage object creation and prevent duplicates, while incorporating Runtime Optimization to strip unnecessary components for flexible asset reuse—all operating directly through a ScriptableObject-driven approach.</h2>
-      <img src="picture/3.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
-
-
-      <!-- ------------------------- -->
-    
-       
-    <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">GhostControl class</strong> <br> The GhostControl class serves as the core Interaction State Machine for ghostly entities within the game. It acts as a bridge between the back-end data (ScriptableObjects/Databases) and the front-end presentation, handling complex gameplay consequences based on player choices.
-</h2>
-      <br><br>
-
-
-<img src="picture/4.png" alt="" style="margin-top: 4%;max-width: 640px;">
-<img src="picture/5.png" alt="" style="margin-top: 4%;max-width: 640px;">
-<img src="picture/6.png" alt="" style="margin-top: 4%;max-width: 640px;">
-<img src="picture/7.png" alt="" style="margin-top: 4%;max-width: 640px;">
-<img src="picture/8.png" alt="" style="margin-top: 4%;max-width: 640px;">
-
-    <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 640px;">
-  <source src="ghostControl.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-       
-    <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Manage work schedule</strong> <br>I utilized Notion for time management and task delegation, ensuring the project was successfully completed within the established deadline.</h2>
-<img src="picture/notion.png" alt="" style="margin-top: 4%;max-width: 640px;">
-  
-      </div>
+      <h1 style="font-weight: bold; font-size: 60px; margin-top: 3%;">Features</h1> <br>
       
+      <div class="popup-2">
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--primary);">GhostData Class</strong> <br> 
+        The GhostData class implements a Data-Driven Design using Unity's ScriptableObject. This approach decouples ghost attributes and visual assets from the core game logic, allowing for easy content creation and balancing without code modifications. It centralizes essential data—such as dialogue, progression stages, and asset references—ensuring memory efficiency.</h2>
+        
+        <img src="picture/1.png" alt="" style="margin-top: 4%;">
+        
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--primary);">Ghost Data Asset</strong> <br>
+        Example of creating GhostData using ScriptableObjects for efficient data management in the Unity Inspector.</h2>
+        
+        <img src="picture/data.png" alt="" style="margin-top: 4%; margin-bottom: 10%; max-width: 640px;">
 
-</div>
-     <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--accent);"> What I Learned</strong> <br> 
-Through this project, I gained hands-on experience using ScriptableObjects for efficient data management in Unity. Additionally, I developed essential soft skills in time management, team collaboration, and performing under high-pressure constraints
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--primary);">GhostData Container</strong> <br>
+        The GhostDatabase class serves as a Centralized Data Container for all ghost assets within the game. By utilizing a ScriptableObject-based List, I established a 'Single Source of Truth' that allows for organized data management and seamless access across various game systems.</h2>
+        
+        <img src="picture/2.png" alt="" style="margin-top: 4%;">
+        <img src="picture/database.png" alt="" style="margin-top: 4%; max-width: 640px;">
 
-</h2><br>
+        <hr style="margin-bottom: 10%;">
+        
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--primary);">GhostSpawner Class</strong> <br> 
+        The GhostSpawner class serves as the core execution layer. It utilizes a Dictionary-based system to efficiently track and manage object creation, while incorporating Runtime Optimization by managing asset reuse directly through a ScriptableObject-driven approach.</h2>
+        
+        <img src="picture/3.png" alt="" style="margin-top: 4%; margin-bottom: 3%;">
 
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--primary);">GhostControl Class</strong> <br> 
+        The GhostControl class manages the Interaction Logic and Player State. It acts as a bridge between the back-end data and the front-end presentation, handling gameplay consequences and Sanity Meter changes based on player choices.</h2>
+        
+        <br><br>
+        <img src="picture/4.png" alt="" style="margin-top: 4%; max-width: 640px;">
+        <img src="picture/5.png" alt="" style="margin-top: 4%; max-width: 640px;">
+        <img src="picture/6.png" alt="" style="margin-top: 4%; max-width: 640px;">
+        <img src="picture/7.png" alt="" style="margin-top: 4%; max-width: 640px;">
+        <img src="picture/8.png" alt="" style="margin-top: 4%; max-width: 640px;">
 
-</div>
+        <video width="100%" height="auto" autoplay loop muted playsinline style="max-width: 640px;">
+          <source src="ghostControl.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--primary);">Project Management</strong> <br>
+        I utilized Notion for time management and task delegation, ensuring the project was successfully completed within the game jam deadline.</h2>
+        <img src="picture/notion.png" alt="" style="margin-top: 4%; max-width: 640px;">
+      </div>
+    </div>
 
- <div id="footer"></div>  
+    <h2 style="text-align: left;"><strong style="font-weight: bold; color: var(--accent);">What I Learned</strong> <br> 
+    Through this project, I gained hands-on experience using ScriptableObjects for efficient data management in Unity. I learned how to develop a Sanity Meter system where player choices directly impact the game's outcome. Additionally, I improved essential soft skills in team collaboration and performing under high-pressure constraints.
+    </h2><br>
 
+    <div id="footer"></div>  
 </div>
 </body>
-
 </html>
-
