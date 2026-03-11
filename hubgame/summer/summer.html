@@ -140,15 +140,16 @@
   Your browser does not support the video tag.
 </video>
 </div>
+<br>
 
        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Key Differences</strong> <br>The legacy system relied on Destroying and Re-instantiating objects, which forced Unity to constantly allocate new RAM. By transitioning from destruction to Repositioning, we eliminate the need for new allocations. In summary: the new system Moves (Recycles) while the old system Destroys.</h2>
 
 
-</div>
+</div><br>
 
      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--accent);"> What I Learned</strong> <br> 
 
-I learned that for better optimization, we don't always need to destroy GameObjects. If they are used repeatedly, we can simply reposition and reuse them instead. Additionally, by activating objects only when the player is within range, we can keep the scene light and avoid loading too many objects at once.
+Implemented Object Pooling for road segments and obstacle generation to minimize runtime instantiation overhead. Focused on Resource Optimization by reducing draw calls and managing asset lifecycles, ensuring a stable frame rate during high-speed gameplay.
 </h2><br>
 
 
@@ -161,6 +162,5 @@ I learned that for better optimization, we don't always need to destroy GameObje
 </body>
 
 </html>
-
 
 
