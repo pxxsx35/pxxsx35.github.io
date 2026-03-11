@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Destroy Block</title>
     <script>
         const version = Date.now();
         document.write(`<link rel="stylesheet" href="../../style.css?v=${version}">`);
@@ -15,21 +15,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
 </head>
 <body class="fade-in">
-    <!-- Navbar -->
-       <div id="navbar"></div>
+    <div id="navbar"></div>
 
-    <!-- End Navbar  -->
-
-
-<div class="container" align = "center">
-  
-
+<div class="container" align="center">
       
     <h1 style="font-weight: bold;font-size: 60px;margin-top: 3%;">Destroy Block</h1>
-
-
-  <h2 style="color : var(--accent); margin-bottom: 2%;">Game in class</h2>
-  <h2 style="color : var(--primary); margin-bottom: 2%;">Made with P5js (JavaScript)</h2>
+    <h2 style="color : var(--accent); margin-bottom: 2%;">Algorithm & Grid Logic Implementation</h2>
+    <h2 style="color : var(--primary); margin-bottom: 2%;">Made with P5js (JavaScript)</h2>
   
     <hr>
 
@@ -40,86 +32,60 @@
   </iframe>
 </div>
 
-
-    <!-- End Game Alone -->
-
     <br>
     <div class="box-btn">
             <a href="https://editor.p5js.org/teerapuwanai1/sketches/gnggK7qvt" class="btn" target="_blank">Source Code</a>
-            <!-- <a href="" class="btn">GitHub</a> -->
     </div>
-     <h5 align = "right">Dev by: Teerapuwanai Chanachaisombud , Puwadon Sunreem</h5>
+     <h5 align="right">Dev by: Teerapuwanai Chanachaisombud , Puwadon Sunreem</h5>
     
     <hr>
     <br>
 
     <div class="explanntion">
-      <h2 >  destroyblock</h2>
+      <h2>Game Logic Overview</h2>
       <br>
-
     <img src="picture/gameloop.png" alt="Game Loop" >
-
-
-
     </div>
-    <!-- End GameLoop -->
 
-        <br>
-
-    <br>
-<hr>
-
-
+    <br><hr>
 
     <div class="explanntion">
      <h1 style="font-weight: bold;font-size: 60px;margin-top: 3%;">Features</h1> <br>
-     <!-- First -->
+
     <div class="popup-2">
-      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function generateBlock</strong> <br> Create an array to store all possible block patterns. Once all generated blocks have been used (checked via the 'placed' variable), a new set of blocks will be automatically re-generated.</h2>
+      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">generateBlock (Randomized Patterns)</strong> <br> 
+      Created an array system to store various block shapes. The algorithm tracks the 'placed' status of each block and automatically re-generates a new set of patterns once all current choices have been utilized.</h2>
       <img src="picture/1.png" alt="" style="margin-top: 4%;">
       <img src="picture/ex4.png" alt="" style="margin-top: 4%;">
       <hr style="margin-bottom: 5%;">
-      <h2 style="text-align: center;"><strong style="font-weight: bold;">Function drawGrid , drawPlacedBlocks , drawBlocks </strong> </h2><br><br>
 
+      <h2 style="text-align: center;"><strong style="font-weight: bold;">Rendering & Coordinate System</strong> </h2><br><br>
       <img src="picture/2.png" alt="" style=""><br><br><br>
-       
-      
-      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function drawGrid </strong> <br> This function renders the background grid of the game. It iterates through each cell in the grid and, if a cell is empty (value === 0), it draws a light orange square to indicate a slot where a block can be placed</h2>
+        
+      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">drawGrid (Grid Visualization)</strong> <br> 
+      Renders the background layout by iterating through the grid array. If a cell value is 0 (empty), it displays a placeholder, establishing the visual coordinate system for the player.</h2>
       <img src="picture/ex2.png" alt="" style="">
-       <br>
-     
-       <br><h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function drawPlacedBlocks </strong> <br> This function renders the blocks that have already been placed on the grid. It scans for grid cells with a value of 1 and draws the corresponding image (img) stored in that cell at the correct grid coordinates based on the "i" and "j" axes.</h2>
+       <br><br>
+
+      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">drawPlacedBlocks (State Rendering)</strong> <br> 
+      Handles the rendering of blocks already locked into the grid. It scans the grid state for values of 1 and maps the corresponding image assets to their exact pixel coordinates.</h2>
       <img src="picture/ex3.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
 
-
-      <!-- ------------------------- -->
-    
-       
-    <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function drawBlocks</strong> <br> This function renders the available block choices (the 3 randomized blocks) that have not yet been placed by the player (!block.placed). It calls the drawPattern function to draw these block shapes at their designated positions on the right side of the screen.</h2>
-      <img src="picture/ex1.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
-
- <br>
-<br>
-
-        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function drawPattern</strong> <br> This function renders the block shapes as images. It iterates through the matrix of a given block, and if it encounters a "1", it draws the blockImage at the calculated position.</h2>
-      <img src="picture/3.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
-        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function canPlaceBlock</strong> <br> This function is used to verify if a block can be placed at a specific location. It checks whether the block exceeds the grid boundaries or overlaps with an existing block already on the grid. It returns true if the placement is valid.</h2>
+      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">canPlaceBlock (Boundary & Collision)</strong> <br> 
+    A core validation algorithm that checks if a block can be legally placed. It ensures that the block does not exceed grid boundaries and prevents overlapping with existing cells.</h2>
       <img src="picture/4.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
-        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function placeBlock</strong> <br> This function records the block placement onto the grid. It changes the value of the targeted grid cells to 1 and stores the block’s image (img) in those cells for future rendering.</h2>
-      <img src="picture/5.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
-        <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">Function clearFullLines</strong> <br> The core mechanic of the game, this function checks for and clears completed rows or columns. If a row or column is entirely filled with blocks, the system clears those cells, awards points to the player, and adds extra time.</h2>
+
+      <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--primary);">clearFullLines (Line Clearing Algorithm)</strong> <br> 
+      The primary game mechanic that scans both rows and columns. If a line is fully occupied (all values === 1), the algorithm clears those cells, updates the score, and resets the grid state.</h2>
       <img src="picture/6.png" alt="" style="margin-top: 4%;margin-bottom: 3%;">
  
       </div>
-      
-
 </div>
 
-     <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--accent);"> What I Learned</strong> <br> 
-Developed a Modular Enemy Framework based on the Separation of Concerns principle. By decoupling AI logic, shared attributes, and visuals into distinct modules , I created a highly scalable system that allows for rapid integration of diverse enemy types. Leveraged Polymorphism to implement specialized behaviors like aerial pathing and status afflictions, while optimizing performance through Integer Hashing and efficient Data Structures
-
+<hr>
+     <h2 style="text-align: left;"><strong style="font-weight: bold; color : var(--accent);">What I Learned</strong> <br> 
+     Gained experience in managing game data through 2D Array Manipulation and implementing custom game logic without external physics engines. Mastered Coordinate Transformation for mouse-to-grid interaction and developed a reliable Line Clearing Algorithm for grid-based puzzle mechanics.
 </h2><br>
-
 
 </div>
 
@@ -127,7 +93,4 @@ Developed a Modular Enemy Framework based on the Separation of Concerns principl
 
 </div>
 </body>
-
 </html>
-
-
