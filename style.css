@@ -356,6 +356,10 @@ display: block;
 display: block;
   width: 90vw;           /* กว้าง 100% ของความกว้างหน้าจอ */
 }
+img 
+{
+    width: 90vw;
+}
  
 }
 
